@@ -25,6 +25,7 @@ Icon size are in pixels. All icons have same height and width
 ## Step 3: Click on the CTA "Start Benchmark"
 
 ## Step 4: Use the scroll randomly -- fast scroll, slow scroll, random up/down
+![Icons List](./assets/app-icons-page.png "Icons List")
 
 ## Step 5: Collect the metrics
 
