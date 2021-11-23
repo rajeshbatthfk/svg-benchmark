@@ -15,9 +15,6 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		856461DB133A746E38444CE9 /* libPods-svg_benchmark.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537DD392BCF6031B532C2F3C /* libPods-svg_benchmark.a */; };
 		A5769778274BBD120038D569 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5769777274BBD120038D569 /* libswiftWebKit.tbd */; };
-		A576977E274C156D0038D569 /* ProfilerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A576977D274C156D0038D569 /* ProfilerViewManager.m */; };
-		A5769781274C1A410038D569 /* ProfilerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5769780274C1A410038D569 /* ProfilerView.swift */; };
-		A5769785274C1C020038D569 /* ProfilerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5769784274C1C020038D569 /* ProfilerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +43,6 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = svg_benchmark/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97F18780B5B00A07E184963A /* Pods-svg_benchmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-svg_benchmark.debug.xcconfig"; path = "Target Support Files/Pods-svg_benchmark/Pods-svg_benchmark.debug.xcconfig"; sourceTree = "<group>"; };
 		A5769777274BBD120038D569 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
-		A576977A274C14F60038D569 /* ProfilerViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilerViewManager.h; sourceTree = "<group>"; };
-		A576977D274C156D0038D569 /* ProfilerViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilerViewManager.m; sourceTree = "<group>"; };
-		A576977F274C1A410038D569 /* svg_benchmark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "svg_benchmark-Bridging-Header.h"; sourceTree = "<group>"; };
-		A5769780274C1A410038D569 /* ProfilerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilerView.swift; sourceTree = "<group>"; };
-		A5769784274C1C020038D569 /* ProfilerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilerView.m; sourceTree = "<group>"; };
 		CB772689A3000CFBBFF12DFA /* Pods-svg_benchmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-svg_benchmark.release.xcconfig"; path = "Target Support Files/Pods-svg_benchmark/Pods-svg_benchmark.release.xcconfig"; sourceTree = "<group>"; };
 		EC57370D6DA0141F5EFCD5C0 /* libPods-svg_benchmark-svg_benchmarkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-svg_benchmark-svg_benchmarkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -103,11 +95,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				A576977A274C14F60038D569 /* ProfilerViewManager.h */,
-				A576977D274C156D0038D569 /* ProfilerViewManager.m */,
-				A5769780274C1A410038D569 /* ProfilerView.swift */,
-				A5769784274C1C020038D569 /* ProfilerView.m */,
-				A576977F274C1A410038D569 /* svg_benchmark-Bridging-Header.h */,
 			);
 			name = svg_benchmark;
 			sourceTree = "<group>";
@@ -429,9 +416,6 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				A576977E274C156D0038D569 /* ProfilerViewManager.m in Sources */,
-				A5769781274C1A410038D569 /* ProfilerView.swift in Sources */,
-				A5769785274C1C020038D569 /* ProfilerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +434,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AD8715B45B254F4753CDB04 /* Pods-svg_benchmark-svg_benchmarkTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -478,7 +461,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4202673771AF801A6228DC39 /* Pods-svg_benchmark-svg_benchmarkTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = svg_benchmarkTests/Info.plist;
