@@ -14,7 +14,6 @@ import {getSvgIcons} from './SvgIcons';
 import {getPngIcons} from './PngIcons';
 import OptionsPane from './OptionsPane';
 import _ from 'lodash';
-import ProfilerView from './ProfilerView';
 
 const modes = ['SVGR', 'SVG-XML', 'PNG'];
 
@@ -85,7 +84,7 @@ function IconList({size, count, mode = modes[0]}) {
     const iconFactory = usePng ? getPngIcons : getSvgIcons;
     return _.flatten(
       _.times(count).map(i => iconFactory({id: i, useXml, size})),
-    ).map(icon => <ProfilerView key={icon.key}>{icon}</ProfilerView>);
+    );
   }, [mode, size, count]);
   return (
     <View style={{flexDirection: 'column', flex: 1}}>
