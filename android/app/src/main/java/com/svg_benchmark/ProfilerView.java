@@ -1,15 +1,19 @@
 package com.svg_benchmark;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
+
+import androidx.core.os.TraceCompat;
 
 public class ProfilerView extends FrameLayout {
     public static final String PROFILER_VIEW = "ProfilerView";
     private static final String TAG = PROFILER_VIEW;
     private final long createdTime = System.currentTimeMillis();
+    private String iconName = "NO-NAME";
+    private String mode = "NO-MODE";
 
     public ProfilerView(Context context) {
         super(context);
@@ -28,7 +32,7 @@ public class ProfilerView extends FrameLayout {
         Log.d(TAG, "ProfilerView created");
     }
 
-    @Override
+   /* @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         long attachedTime = System.currentTimeMillis();
@@ -48,6 +52,21 @@ public class ProfilerView extends FrameLayout {
     protected void onDetachedFromWindow() {
         Log.d(TAG, "onDetachedFromWindow() called");
         super.onDetachedFromWindow();
+    }*/
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        long start = System.currentTimeMillis();
+        super.dispatchDraw(canvas);
+        Log.i(TAG, String.format("%S::draw: %s %dms", this.mode, this.iconName, (System.currentTimeMillis() - start)));
+
     }
 
+    public void setIconName(String iconName) {
+        this.iconName = iconName;
+    }
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
 }
